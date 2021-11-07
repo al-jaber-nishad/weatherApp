@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png">
+  <!-- <link rel="stylesheet" href="{% static 'bootstrap.css' %}"> -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header" align='center'>
+      <h1><a href="{% url 'index' %}">Weather App</a></h1>
+      <h4>Know the Weather first to do the work more preciously!</h4>
+    </div>
+
+
+    <div class="inputTask">
+      <form method="POST">
+        {% csrf_token %}
+          <input class="input" type="text" name='city'>
+    
+          <input class="button btn btn-primary" type="submit" value="Search City">
+      </form>
+    </div>
+
+    
+    <div style="color:white">
+      {% if country_code %}
+        
+      {% else %}
+        <h1 style="color:white">Type & Search by City Name!</h1>
+      {% endif %}
+    </div>
+    
+    
+        
+
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+              <div class="card p-4">
+                  <div class="d-flex">
+                      <h6 class="flex-grow-1">{{ city }}, {{ country_code }}</h6>
+                      <!-- <h6>16:08</h6> -->
+                  </div>
+                  <div class="d-flex flex-column temp mt-5 mb-3">
+                      <h1 class="mb-0 font-weight-bold" id="heading"> {{ temp }} </h1> <span class="small grey">{{ description }}</span>
+                  </div>
+                  <div class="d-flex">
+                      <div class="temp-details flex-grow-1">
+                          <p class="my-1"> <img src="https://i.imgur.com/B9kqOzp.png" height="17px"> <span> {{ wind }} km/h </span> </p>
+                          <p class="my-1"> <img src="https://findicons.com/files/icons/2770/ios_7_icons/512/humidity.png" alt="" width="15px"> <span> {{ humidity }} </span> </p>
+                          <p class="my-1"> <img src="https://img.icons8.com/ios/452/atmospheric-pressure.png" alt="" width="15px"> <span> {{ pressure }} hPa </span> </p>
+                      </div>
+                      <div> <img src="http://openweathermap.org/img/w/{{icon}}.png" width="100px"> </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

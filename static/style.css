@@ -1,0 +1,133 @@
+
+
+
+.header {
+  background-color: rgba(255, 81, 0, 0.849);
+  padding: 60px 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header h1 a{
+  text-decoration: none;
+  color: white;
+}
+
+.header h1 a:hover{
+  color: rgb(255, 205, 205);
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* .header{
+    width: 100%;
+  } */
+}
+
+@media only screen and (min-width: 600px) and (max-width:899px){
+  /* .header{
+    width: 70%;
+  } */
+}
+
+@media only screen and (min-width: 1200px) {
+  /* .header{
+    width: 50%;
+  } */
+  /* .inputTask .input{
+    width: auto;
+  }
+  .inputTask .button{
+    width: auto;
+  } */
+}
+
+
+
+/* Input Section  */
+
+
+/* Input Section */
+/* 
+input{
+  margin: 0 10px;
+} */
+
+.inputTask {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.inputTask .input {
+  /* width: 66%; */
+  max-width: 1000px;
+  height: 45px;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+
+
+.inputTask .button{
+  /* width: 30%; */
+  max-width: 200px
+}
+
+
+/* .inputTask .details_input {
+  width: 70%;
+  height: 120px;
+  vertical-align: middle;
+  border-radius: 4px;
+} */
+
+
+
+/* Main Body Section  */
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+html,
+body {
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    background-color: #2a2a46;
+    /* display: grid; */
+    place-items: center
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #6f707d;
+    font-family: 'Marcellus', serif
+}
+
+#heading {
+    font-size: 55px;
+    color: #2b304d
+}
+
+.temp {
+    place-items: center
+}
+
+.temp-details>p>span,
+.grey {
+    color: #a3acc1;
+    font-size: 12px
+}
+
+.fa {
+    color: #a5a5b1
+}
+
+*:focus {
+    outline: none
+}
