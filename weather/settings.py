@@ -25,9 +25,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'django-insecure-dg*_!s#itpz7p&2bfkp_1%xbt39x7zbc3to%#x+c)-4xjpg38d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://jaber-weather-app.herokuapp.com/"]
 
 
 # Application definition
@@ -125,6 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR, 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/files')
 MEDIA_ROOT = MEDIA_DIR
 
 # Default primary key field type
