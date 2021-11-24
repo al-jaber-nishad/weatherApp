@@ -29,7 +29,7 @@ def index(request):
       'humidity' : str(list_of_data['main']['humidity']) + '%',
       'main' : str(list_of_data['weather'][0]['main']),
       'description' : str(list_of_data['weather'][0]['description']),
-      'icon' : str(list_of_data['weather'][0]['icon']),
+      'icon' : list_of_data['weather'][0]['icon'],
       'wind' : str(round(list_of_data['wind']['speed'] * 3.6)),
 
       'city' : city.capitalize(),
